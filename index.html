@@ -14,16 +14,14 @@
         .fade { animation: fade 1.5s; }
         @keyframes fade { from {opacity: .4} to {opacity: 1} }
         @media (min-width: 1024px) { .mobile-action-bar { display: none; } }
-        
         .time-slot:checked + label { background-color: #2563eb; color: white; border-color: #2563eb; }
-        .hidden-element { display: none !important; }
     </style>
 </head>
 <body class="bg-slate-50 text-gray-800 font-sans pb-20 lg:pb-0">
 
     <div class="mobile-action-bar fixed bottom-0 left-0 right-0 z-[1001] grid grid-cols-2 h-16 shadow-lg">
-        <a href="tel:+918792483351" class="bg-blue-600 text-white flex items-center justify-center font-bold text-sm uppercase transition active:bg-blue-700">📞 Call Now</a>
-        <a href="https://wa.me/918792483351" class="bg-[#25D366] text-white flex items-center justify-center font-bold text-sm uppercase border-l border-white/20 transition active:bg-green-600">💬 WhatsApp</a>
+        <a href="tel:+918792483351" class="bg-blue-600 text-white flex items-center justify-center font-bold text-sm uppercase">📞 Call Now</a>
+        <a href="https://wa.me/918792483351" class="bg-[#25D366] text-white flex items-center justify-center font-bold text-sm uppercase border-l border-white/20">💬 WhatsApp</a>
     </div>
 
     <nav class="glass-nav shadow-md sticky top-0 z-[1000] border-b border-blue-100">
@@ -34,12 +32,11 @@
             </div>
             <div class="hidden lg:flex space-x-8 items-center font-bold text-gray-600">
                 <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#services" class="hover:text-blue-600">Services</a>
                 <a href="#consultation" class="hover:text-blue-600">Online Consultation</a>
                 <a href="#location" class="hover:text-blue-600">Location</a>
                 <a href="https://share.google/lt5fTkLcSA4VyYzr6" target="_blank" class="text-amber-500 flex items-center">Reviews ★★★★★</a>
             </div>
-            <a href="#book-form" class="hidden lg:block bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">Book Appointment</a>
+            <a href="#book-form" class="hidden lg:block bg-blue-600 text-white px-6 py-2 rounded-full font-bold">Book Appointment</a>
         </div>
     </nav>
 
@@ -51,11 +48,8 @@
                     <h3 class="text-3xl font-bold text-slate-800">Dr. Pooja Bhardwaj (PT)</h3>
                     <p class="text-blue-700 font-extrabold uppercase text-sm mb-3">Musculoskeletal Physiotherapist</p>
                     <p class="text-lg text-gray-600 italic">B.Sc, BPT, MPT (Ortho), CDNT, COMT MIAP</p>
-                    <p class="text-xl font-bold text-slate-900 mt-2">
-                        <a href="tel:+918792483351" class="hover:text-blue-600 transition">📞 +91 87924 83351</a>
-                    </p>
                 </div>
-                <a href="#book-form" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold shadow-xl inline-block hover:scale-105 transition">Get Started</a>
+                <a href="#book-form" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold shadow-xl inline-block transition hover:scale-105">Book Now</a>
             </div>
             <div class="flex-1">
                 <div class="rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl aspect-[4/5]">
@@ -65,75 +59,50 @@
         </div>
     </header>
 
-    <section id="about" class="py-24 bg-white text-left">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 italic underline underline-offset-8 decoration-blue-600">About Felix Physiotherapy</h2>
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-                    <p>Felix Physiotherapy offers a calm and positive environment in Jalahalli East, Bangalore, designed to help patients regain confidence in movement through expert musculoskeletal care.</p>
-                </div>
-                <div class="slideshow-container shadow-2xl">
-                    <div class="mySlides fade"><img src="photo1.jpg" class="auto-img"></div>
-                    <div class="mySlides fade"><img src="photo2.jpg" class="auto-img"></div>
-                    <div class="mySlides fade"><img src="photo3.jpg" class="auto-img"></div>
-                    <div class="mySlides fade"><img src="photo4.jpg" class="auto-img"></div>
-                    <div class="mySlides fade"><img src="photo5.jpg" class="auto-img"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="consultation" class="py-24 bg-slate-50 border-y border-blue-100">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold italic underline decoration-blue-600 underline-offset-8">Online Consultation</h2>
-                <p class="mt-6 text-gray-600 font-medium italic">Book a 15-minute phone assessment from anywhere (Time Zone: IST).</p>
             </div>
             
             <div class="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-blue-50">
-                <div id="consult-container">
-                    <form class="space-y-8" onsubmit="event.preventDefault(); handleSubmit('consult-container', 'consult-thanks');">
-                        <div class="grid md:grid-cols-3 gap-6 text-left">
-                            <div class="space-y-2">
-                                <label class="block font-bold text-blue-800 ml-2">Name</label>
-                                <input type="text" placeholder="Your Name" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="block font-bold text-blue-800 ml-2">Email</label>
-                                <input type="email" placeholder="Email Address" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="block font-bold text-blue-800 ml-2">Phone</label>
-                                <input type="tel" placeholder="Mobile Number" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
-                            </div>
+                <form action="https://formspree.io/f/mlgwynbl" method="POST" class="space-y-8">
+                    <div class="grid md:grid-cols-3 gap-6 text-left">
+                        <div class="space-y-2">
+                            <label class="block font-bold text-blue-800 ml-2">Name</label>
+                            <input type="text" name="name" placeholder="Your Name" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
                         </div>
+                        <div class="space-y-2">
+                            <label class="block font-bold text-blue-800 ml-2">Email</label>
+                            <input type="email" name="email" placeholder="Email Address" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block font-bold text-blue-800 ml-2">Phone</label>
+                            <input type="tel" name="phone" placeholder="Mobile Number" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                    </div>
 
-                        <div class="grid md:grid-cols-2 gap-8 items-start text-left">
-                            <div class="space-y-4">
-                                <label class="block font-bold text-blue-800 ml-2">1. Select Date</label>
-                                <input type="date" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 cursor-pointer" required>
-                            </div>
-                            <div class="space-y-4">
-                                <label class="block font-bold text-blue-800 ml-2">2. Free Slots (IST)</label>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <input type="radio" name="slot" id="s1" class="hidden time-slot" required>
-                                    <label for="s1" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">09:00 AM</label>
-                                    <input type="radio" name="slot" id="s2" class="hidden time-slot">
-                                    <label for="s2" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">11:30 AM</label>
-                                    <input type="radio" name="slot" id="s3" class="hidden time-slot">
-                                    <label for="s3" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">05:30 PM</label>
-                                    <input type="radio" name="slot" id="s4" class="hidden time-slot">
-                                    <label for="s4" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">07:45 PM</label>
-                                </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-start text-left">
+                        <div class="space-y-4">
+                            <label class="block font-bold text-blue-800 ml-2">1. Select Date</label>
+                            <input type="date" name="date" class="w-full p-4 rounded-2xl bg-slate-50 border border-blue-100 cursor-pointer" required>
+                        </div>
+                        <div class="space-y-4">
+                            <label class="block font-bold text-blue-800 ml-2">2. Free Slots (IST)</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="radio" name="slot" value="09:00 AM" id="s1" class="hidden time-slot" required>
+                                <label for="s1" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">09:00 AM</label>
+                                <input type="radio" name="slot" value="11:30 AM" id="s2" class="hidden time-slot">
+                                <label for="s2" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">11:30 AM</label>
+                                <input type="radio" name="slot" value="05:30 PM" id="s3" class="hidden time-slot">
+                                <label for="s3" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">05:30 PM</label>
+                                <input type="radio" name="slot" value="07:45 PM" id="s4" class="hidden time-slot">
+                                <label for="s4" class="border-2 border-blue-100 p-3 text-center rounded-xl cursor-pointer hover:border-blue-500 font-bold transition-all">07:45 PM</label>
                             </div>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-black py-5 rounded-2xl uppercase tracking-widest shadow-lg hover:bg-blue-700 transition">Request Phone Consultation</button>
-                    </form>
-                </div>
-                <div id="consult-thanks" class="hidden-element text-center py-10">
-                    <h2 class="text-4xl font-bold text-blue-700 mb-4 italic">Request Sent!</h2>
-                    <p class="text-gray-700 text-xl italic">Thank you. Dr. Pooja will contact you at your selected time.</p>
-                </div>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-black py-5 rounded-2xl uppercase tracking-widest shadow-lg hover:bg-blue-700 transition">Request Consultation</button>
+                </form>
             </div>
         </div>
     </section>
@@ -141,25 +110,20 @@
     <section id="book-form" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4">
             <div class="bg-blue-600 p-12 rounded-[3rem] shadow-2xl text-center">
-                <div id="appointment-container">
-                    <h2 class="text-4xl font-bold text-white mb-10 italic underline decoration-white underline-offset-8 uppercase">Visit the Clinic</h2>
-                    <form class="space-y-6" onsubmit="event.preventDefault(); handleSubmit('appointment-container', 'appointment-thanks');">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Name" class="w-full p-4 rounded-xl outline-none" required>
-                            <input type="tel" placeholder="Mobile No" class="w-full p-4 rounded-xl outline-none" required>
-                        </div>
-                        <input type="email" placeholder="Email ID" class="w-full p-4 rounded-xl outline-none" required>
-                        <select class="w-full p-4 rounded-xl outline-none text-gray-500 font-medium" required>
-                            <option value="">Select Symptom ▾</option>
-                            <option>Joint pain</option><option>Back pain</option><option>Knee pain</option>
-                        </select>
-                        <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-xl uppercase tracking-widest hover:bg-slate-800 transition">Schedule Appointment</button>
-                    </form>
-                </div>
-                <div id="appointment-thanks" class="hidden-element py-10">
-                    <h2 class="text-4xl font-bold text-white mb-4 italic">Success!</h2>
-                    <p class="text-white text-xl">Request received. Our team will contact you shortly.</p>
-                </div>
+                <h2 class="text-4xl font-bold text-white mb-10 italic underline decoration-white underline-offset-8 uppercase">Visit the Clinic</h2>
+                <form action="https://formspree.io/f/mlgwynbl" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="patient_name" placeholder="Name" class="w-full p-4 rounded-xl outline-none" required>
+                        <input type="tel" name="phone_number" placeholder="Mobile No" class="w-full p-4 rounded-xl outline-none" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email ID" class="w-full p-4 rounded-xl outline-none" required>
+                    <select name="symptom" class="w-full p-4 rounded-xl outline-none text-gray-500 font-medium" required>
+                        <option value="">Select Symptom ▾</option>
+                        <option>Joint pain</option><option>Back pain</option><option>Knee pain</option>
+                        <option>Neck pain</option><option>Shoulder pain</option>
+                    </select>
+                    <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-xl uppercase tracking-widest hover:bg-slate-800 transition">Schedule Appointment</button>
+                </form>
             </div>
         </div>
     </section>
@@ -174,7 +138,7 @@
                         <a href="tel:+918792483351" class="hover:text-blue-600 transition">📞 +91 87924 83351</a>
                     </p>
                     <p class="text-lg font-bold text-blue-600 italic">
-                        <a href="mailto:felixphysiotherapyclinic@gmail.com" class="hover:underline transition">📧 felixphysiotherapyclinic@gmail.com</a>
+                        <a href="mailto:felixphysiotherapy.blr@gmail.com" class="hover:underline">📧 felixphysiotherapy.blr@gmail.com</a>
                     </p>
                     <div class="bg-blue-50 p-6 rounded-2xl space-y-2 border-l-4 border-blue-600">
                         <p class="text-blue-800">Mon - Fri: <span class="float-right font-bold">9:00 AM - 8:00 PM</span></p>
@@ -183,7 +147,7 @@
                     </div>
                 </div>
                 <div class="h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.437063586118!2d77.53228907485622!3d13.071463687253173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae23c0b16309c7%3A0x92afabb9db21f57e!2sFelix%20Physiotherapy!5e0!3m2!1sen!2sus!4v1772477971237!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1557085732294!2d77.5451241!3d13.0892429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae23869911e863%3A0x1927361a45749969!2sFelix%20Physiotherapy%20Clinic!5e0!3m2!1sen!2sin!4v1740947573038!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -194,11 +158,6 @@
     </footer>
 
     <script>
-        function handleSubmit(containerId, thanksId) {
-            document.getElementById(containerId).classList.add('hidden-element');
-            document.getElementById(thanksId).classList.remove('hidden-element');
-        }
-
         document.querySelectorAll('.auto-img').forEach(img => {
             img.onerror = function() {
                 if (!this.dataset.tried) {
